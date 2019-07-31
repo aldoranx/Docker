@@ -4,8 +4,6 @@ Install OpenSSH Server in a Debian Nginx Image
 
 First in your container create a Dockerfile
 
-    $ mkdir nginx_docker
-    $ cd nginx_docker
     $ sudo vim docker
 
 Once your repository is created VIM into the Dockerfile and add your DockerFile configuration
@@ -33,12 +31,10 @@ Before your SSH into your VM check your container IP address in that cas run the
 
 Now to SSH into your Container please run the commad 
 
-    $ ssh root@"container IP address" -p 2222
-
-    or
-
-    $ ssh root@localhost -p 2222
+    $ ssh -i ~/.ssh/id_rsa root@"container IP address" -p 2222 
 
 You can also cannect to your container using the command
 
     $ docker exec -it "container ID" /bin/bash
+
+    
